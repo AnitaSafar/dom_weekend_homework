@@ -7,11 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const handleNewAnimal = function(animal) {
     animal.preventDefault();
-    console.log(animal.target.name.value);
-
+    // console.log(animal.target.name.value);
+    const animalInList = addAnimalToList(animal.target);
     const animalList = document.querySelector("#animal-list");
-
-    animalList.textContent = `Animal1: ${animal.target.name.value} ${animal.target.select.value} 
-    ${animal.target.population.value} ${animal.target.population.value}`
+    animalList.appendChild(animalInList);
 };
 
+const addAnimalToList = function() {
+    const animalInList = document.createElement('li');
+    animalInList.classList.add("animal-in-list");
+
+    return animalInList;
+}
