@@ -25,5 +25,9 @@ const addAnimalToList = function(form) {
     status.textContent = form.status.value;
     animalInList.appendChild(status);
 
+    const population = document.createElement("h3");
+    population.textContent = form.population.value;
+    animalInList.appendChild(population);
+
     return animalInList;
 }
