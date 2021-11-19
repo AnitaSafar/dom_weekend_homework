@@ -8,7 +8,7 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <form>
+    <form id="form">
         <div>
             <label for="name">Common name:</label>
             <input type="text" id="name" required/>
@@ -16,9 +16,9 @@
 
         <div>
             <label for="status">Status:</label>
-            <select>
+            <select id="select">
               <option value=""></option>
-              <option value="critically">Critically Endangered</option>
+              <option value="Critically Endangered">Critically Endangered</option>
               <option value="Endangered">Endangered</option>
               <option value="Vulnerable">Vulnerable</option>
               <option value="Near Threatened">Near Threatened</option>
@@ -38,6 +38,6 @@
     </form>
 
     <h1>The list of animals:</h1>
-    <ul></ul>
+    <ul id="animal-list"></ul>
 </body>
 </html>
