@@ -9,13 +9,17 @@ const handleNewAnimal = function(animal) {
     animal.preventDefault();
     // console.log(animal.target.name.value);
     const animalInList = addAnimalToList(animal.target);
-    const animalList = document.querySelector("#animal-list");
-    animalList.appendChild(animalInList);
+    const animalsList = document.querySelector("#animal-list");
+    animalsList.appendChild(animalInList);
 };
 
-const addAnimalToList = function() {
+const addAnimalToList = function(form) {
     const animalInList = document.createElement('li');
     animalInList.classList.add("animal-in-list");
+
+    const name = document.createElement("h2");
+    name.textContent = form.name.value;
+    animalInList.appendChild(name);
 
     return animalInList;
 }
