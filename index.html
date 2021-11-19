@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endangered Animals</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="name">Common name:</label>
+            <input type="text" id="name" required/>
+        </div>
+
+        <div>
+            <label for="status">Status:</label>
+            <select>
+              <option value=""></option>
+              <option value="critically">Critically Endangered</option>
+              <option value="Endangered">Endangered</option>
+              <option value="Vulnerable">Vulnerable</option>
+              <option value="Near Threatened">Near Threatened</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="population">Population:</label>
+            <input type="text" id="population" required/>
+        </div>
+
+        <div>
+            <label for="habitat">Habitat(s):</label>
+            <input type="text" id="habitat" required/>
+        </div>
+        <input type="submit" value="Add"/>
+    </form>
+
+    <h1>The list of animals:</h1>
+    <ul></ul>
+</body>
+</html>
