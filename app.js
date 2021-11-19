@@ -21,5 +21,9 @@ const addAnimalToList = function(form) {
     name.textContent = form.name.value;
     animalInList.appendChild(name);
 
+    const status = document.createElement("h3");
+    status.textContent = form.status.value;
+    animalInList.appendChild(status);
+
     return animalInList;
 }
