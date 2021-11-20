@@ -11,7 +11,7 @@ const handleNewAnimal = function(animal) {
     animal.preventDefault();
     // console.log(animal.target.name.value);
     const animalInList = addAnimalToList(animal.target);
-    const animalsList = document.querySelector("#animal-list");
+    const animalsList = document.querySelector("#animals-list");
     animalsList.appendChild(animalInList);
 };
 
@@ -38,3 +38,7 @@ const addAnimalToList = function(form) {
     return animalInList;
 }
 
+const handleDelete = function() {
+    const animalsList = document.querySelector("#animals-list");
+    animalsList.innerHTML = "";
+}
