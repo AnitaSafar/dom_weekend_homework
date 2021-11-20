@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const newAnimal = document.querySelector("#form");
     newAnimal.addEventListener('submit', handleNewAnimal);
 
+    const deleteButton = document.querySelector("#delete");
+    deleteButton.addEventListener('click', handleDelete);
 });
 
 
@@ -35,3 +37,4 @@ const addAnimalToList = function(form) {
 
     return animalInList;
 }
+
