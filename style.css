@@ -1,18 +1,21 @@
 body {
-    padding: 20px;
+    margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(0, 217, 255);
+    background-color: rgb(42, 220, 252);
 }
 
 h1 {
+    grid-area: header;
     margin: 0;
     padding: 20px;
-    background-color: rgb(71, 87, 231);
+    padding-top: 40px;
+    background-color: rgb(87, 98, 194);
 }
 
 #form {
-    margin: 0;
-    height: 380px;
+    padding-left: 20px;
+    grid-area: form;
+    height: 420px;
     background-image: url(animals.jpeg);
     background-size: cover;
     background-position: top;
@@ -20,22 +23,52 @@ h1 {
 
 body form  div {
     padding: 10px;
+    padding-left: 20px;
 }
 
 #name {
-    margin-top: 100px;
+    margin-top: 120px;
+
 }
 #add {
+    margin-top: 20px;
+    margin-left: 30px;
     border-radius: 20%;
     background-color: rgba(123, 230, 123, 0.842);
 }
 
 #delete {
+    grid-area: delete;
+    width: 100px;
     margin-top: 10px;
-    background-color: rgb(207, 72, 72);
+    margin-left: 30px;
+    background-color: rgb(207, 92, 72);
     border-radius: 15%;
+    float: middle;
 }
 
 .animal-in-list {
     padding: 10px;
+}
+
+#list {
+    grid-area: list;
+    margin-top: 50px;
+    padding-left: 20px;
+    width: 900px;
+}
+
+#animals-list {
+    grid-area: animals-list;
+    padding-left: 150px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'form form'
+        'delete delete'
+        'list list'
+        'animals-list animals-list';
 }
